@@ -25,10 +25,10 @@ def find_mismatch(text):
               case 2:
                 a = '{'
             if (len(opening_brackets_stack)>0) and (opening_brackets_stack[len(opening_brackets_stack)-1] == a):
-                    opening_brackets_stack.pop()
-            else: return i
-        if len(opening_brackets_stack)==0: return -1
-        else : return len(text)
+               opening_brackets_stack.pop()
+            else: return i+1
+    if len(opening_brackets_stack)==0: return -1
+    else : return len(text)
 
 
 def main():
@@ -41,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
